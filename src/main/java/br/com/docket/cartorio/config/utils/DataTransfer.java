@@ -1,4 +1,4 @@
-package br.com.docket.cartorio.utils;
+package br.com.docket.cartorio.config.utils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;

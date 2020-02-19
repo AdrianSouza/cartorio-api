@@ -17,26 +17,36 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @Controller
 @RequestMapping("cartorio/")
+@Api(value = "Cartorio controller")
 public interface ICartorioController<T, K> {
 
-	@PostMapping("teste/")
+	@PostMapping
+	@ApiOperation(value = "Salva um cartorio.")
 	public ResponseEntity<?> save(@Valid @RequestBody T cartorioDTO) throws SQLException;
 
-	@PatchMapping("teste2/")
+	@PatchMapping
+	@ApiOperation(value = "Altera um cartorio.")
 	public ResponseEntity<?> patch(@RequestBody T cartorioDTO)throws SQLException;
-	
+		
 	@DeleteMapping("id/{id}")
+	@ApiOperation(value = "Deleta um cartorio.")
 	public ResponseEntity<K> delete(@PathVariable K id);
 	
 	@GetMapping("id/{id}")
+	@ApiOperation(value = "Procura um cartorio pelo id.")
 	public ResponseEntity<T> findById(@PathVariable K id);
 	
-	@GetMapping("teste5/")
+	@GetMapping
+	@ApiOperation(value = "Procura um cartorio por varios id.")
 	public ResponseEntity<List<T>> findByIds(@RequestBody List<K> cartorioIds);
 	
 	@GetMapping("pageable/")
+	@ApiOperation(value = "Procura todos os cartorios paginados.")
 	public ResponseEntity<List<T>> findAll(@PageableDefault(page = 0, size = 15) Pageable pageable);
 
 }

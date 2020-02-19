@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import br.com.docket.cartorio.dto.advice.ErroDeValidacaoDTO;
+import br.com.docket.cartorio.entitys.dto.advice.ErroDeValidacaoDTO;
 
 @RestControllerAdvice
 public class AdviceErrorHandler {

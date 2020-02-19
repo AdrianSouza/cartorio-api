@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.docket.cartorio.dto.cartorio.CartorioDTO;
+import br.com.docket.cartorio.entitys.dto.cartorio.CartorioDTO;
 import br.com.docket.cartorio.service.CartorioService;
 
 @RestController

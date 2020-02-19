@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import br.com.docket.cartorio.dto.cartorio.CartorioDTO;
-import br.com.docket.cartorio.entity.Cartorio;
+import br.com.docket.cartorio.config.utils.DataTransfer;
+import br.com.docket.cartorio.entitys.dto.cartorio.CartorioDTO;
+import br.com.docket.cartorio.entitys.model.entitys.Cartorio;
 import br.com.docket.cartorio.repository.CartorioRepository;
-import br.com.docket.cartorio.utils.DataTransfer;
 
 @Service
 public class CartorioService {
